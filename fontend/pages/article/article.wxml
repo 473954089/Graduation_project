@@ -1,0 +1,9 @@
+<!-- 顶部 -->
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+</view>
+
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+<web-view src='{{url}}'></web-view>

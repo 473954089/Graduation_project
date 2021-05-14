@@ -1,0 +1,19 @@
+<myheader3
+  titleText="消息中心"
+></myheader3>
+
+<view wx:for="{{comment}}" wx:for-item="i">
+    <navigator url="../answer/answer?id={{i.comment_answer}}">
+<l-card style="margin-bottom:20px" type="avatar" image="{{i.avatar}}" bindtap="yidu" data-comment-id="{{i.comment_id}}" data-from-uuid="{{i.from_uuid}}" data-nickname="{{i.nickname}}"
+        plaintext="{{true}}"
+        full="{{true}}"
+        title="{{i.nickname}}">
+    <view class="content">
+        {{i.comment_content}}
+    </view>
+    <view style="margin-top: 15px;">
+        <view style="float: right"></view>
+    </view>
+</l-card>
+    </navigator>
+</view>

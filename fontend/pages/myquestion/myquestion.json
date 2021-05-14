@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "myheader3": "../../component/myheader3/myheader3",
+    "l-input": "../../miniprogram_npm/lin-ui/input/index",
+    "l-slide-view":"../../miniprogram_npm/lin-ui/slide-view/index"
+  }
+}

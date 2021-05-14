@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/firstpage/firstpage",
+    "pages/login/login",
+    "pages/me/me",
+    "pages/issue/issue",
+    "pages/detail/detail",
+    "pages/news/news",
+    "pages/historynews/historynews",
+    "pages/search/search",
+    "pages/myquestion/myquestion",
+    "pages/article/article",
+    "pages/feedback/feedback",
+    "pages/answer/answer",
+    "pages/myanswer/myanswer",
+    "pages/personaldetail/personaldetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#42C1FE",
+    "navigationBarTitleText": "深大问答",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#42C1FE",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#42C1FE",
+    "borderStyle": "black",
+    "backgroundColor": "#fefefe",
+    "list": [
+      {
+        "pagePath": "pages/firstpage/firstpage",
+        "text": "首页",
+        "iconPath": "src/home2.png",
+        "selectedIconPath": "src/home.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息中心",
+        "iconPath": "src/message.png",
+        "selectedIconPath": "src/message2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "src/me2.png",
+        "selectedIconPath": "src/me.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,125 @@
+<!-- 待进行修改，需要等威成的半成品 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<text>个人中心</text>
+
+</view>
+
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+<!-- 顶部 -->
+<view class='top-view'>
+  <!-- 头像 -->
+
+  <view class='head' bindtap="personaldetail">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+
+  <!-- <block wx:if='{{!userInfo.avatarUrl}}'>
+    <button open-type='getUserInfo' 
+    bindgetuserinfo='getUserInfo'
+    class='login-btn'>问
+    </button>
+  </block>
+
+  <block wx:else>
+    <image class='head' src='{{userInfo.avatarUrl}}'>
+    </image>
+  </block> -->
+
+
+  <!-- 昵称 -->
+  <view class='nickname'>
+    <open-data type="userNickName"></open-data>
+  </view>
+
+<!-- 
+  <block wx:if='{{!userInfo.nickName}}'>
+    <text class='nickname'>问答
+    </text>
+  </block>
+
+  <block wx:else>
+    <text class='nickname'>{{userInfo.nickName}}
+    </text>
+  </block> -->
+</view>
+
+
+<view class='tab'>
+  <!-- <view class='btn' bindtap='news'>
+    <image src='../../src/xiaoxi.png' class='btn-image'></image>
+    <text>消息</text>
+  </view> -->
+  <view class='btn' bindtap='myquestion'>
+    <image src='../../src/wodetiwen.png' class='btn-image'></image>
+    <text>历史提问</text>
+  </view>
+  <view class='btn' bindtap='myanswer'>
+    <image src='../../src/guanzhu.png' class='btn-image'></image>
+    <text>历史回答</text>
+    <!-- 原为我的关注 -->
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+<view class='view1' bindtap='gontoFeedBack' data-src='../../src/feedback.png'>
+
+  <image class='image3' src='../../src/feedback.png'>
+  </image>
+
+  <text class='text'>意见反馈
+  </text>
+
+</view>
+
+<view class='view1' bindtap='gontoFeedBack' data-src='../../src/feedback.png'>
+
+<image class='image3' src='../../src/feedback.png'>
+</image>
+
+<text class='text'>社区规范
+</text>
+
+</view>
+
+
+<!-- <view class='view1' bindtap=''>
+
+  <image class='image1' src='../../src/news.png'>
+  </image>
+
+  <text class='text'>加入我们
+  </text>
+
+  <view class='redNumView' wx:if='{{redNum}}'>
+    <view >{{redNum}}
+    </view>
+  </view>
+
+</view> -->
+
+
+
+
+
+<!-- <view class='view1' bindtap='asker_qrcode'>
+
+  <image class='image2' src='../../src/ask.png'>
+  </image>
+
+  <text class='text'>公众号
+  </text>
+
+</view> -->
+
+
+
+

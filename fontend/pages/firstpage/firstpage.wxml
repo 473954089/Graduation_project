@@ -1,0 +1,222 @@
+<!-- 顶部 -->
+<!-- 验证流程被我注释掉了,其他保留,app.json中修改了部分图标显示 -->
+<myheader2></myheader2>
+ <!-- 用其他的搜索框
+   <view class="custom flex_center" style="padding-top:{{statusBarHeight}}px"> -->
+        <!-- 顶部搜索框 -->
+          <!-- <view style=' width: {{capsule.left-20}}px; height: {{capsule.height}}px; margin-top:{{(capsule.top+capsule.buttom)/2-statusBarHeight-45}}px; position:fixed;' class="searchBar" bindtap='search'>
+
+            <image style='  height: {{capsule.height-12}}px;width:{{capsule.height-12}}px;' class='searchBar-PIC' src='../../src/search.png'>
+            </image>
+            
+          </view > -->
+
+<!-- </view>
+
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>   -->
+
+
+
+<view >
+<!-- 顶部导航栏 -->
+<view class="swiper-tab">
+
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">今日问答
+<!-- 添加 -->
+  <view class="sw-line" animation="{{hhh}}">
+  </view>
+</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">热榜</view>
+
+</view>
+
+
+
+
+
+<!-- 间隙 -->
+  <view class='gap0'>
+  </view>
+  <!-- <view class='gap1'>
+  </view> -->
+
+<!-- 消息提醒框 -->
+<view class='tip-view' wx:if="{{haveNews}}" bindtap='goToNews'>有新消息啦，点击查看</view>
+
+<swiper class="swiper" style='height:{{swiper_height-statusBarHeight-45-90/bei}}px;' current="{{currentTab}}" duration="200" bindchange="swiperChange" skip-hidden-item-layout='true'>
+
+
+
+<swiper-item >
+  
+    <!-- 今日问答列表 -->
+    <!-- <view class='content'> -->
+      <scroll-view style='height:{{swiper_height-statusBarHeight-45-90/bei}}px' class='scroll-view' scroll-y="true" bindscrolltolower='scrollToLower'>
+        <!-- 问题 -->
+        <block wx:for='{{questionList}}' wx:for-index="question_index" >
+
+          <navigator url='../detail/detail?id={{item.question_id}}'>
+            <view class='items'   hover-stop-propagation='{{true}}'  >
+              <!-- 发布者的头像昵称 -->
+              <view class='ava-nic-view'>
+                <image class='avatar' src='{{item.avatar}}'></image>
+                <text style='font-size:28rpx; color:#cccccc; margin-left:30rpx'>{{item.nickname}}</text>
+                <text style='font-size:28rpx; color:#cccccc;margin-left:30rpx;'>{{item.question_time}}</text>
+              
+              </view>
+              <view style='height:20rpx;'></view>
+
+              <!-- 问题标题 -->
+              <view class='title1' wx:if='{{item.question_title!=""}}'>
+                  <text >{{item.question_title}}
+                  </text>
+                </view>
+
+
+              <!-- 问题文字 -->
+              <!-- <block > -->
+                <view class='text1' wx:if='{{item.question_content!=""}}'>
+                  <text class="shenglue">{{item.question_content}}
+                  </text>
+                </view>
+
+              <!-- 文字与图片之间的间隔 -->
+                <view style='height:30rpx' wx:if='{{true}}'>
+                </view>
+              <!-- </block> -->
+              <!-- 问题图片 -->
+                <!-- <view class='images' wx:if='{{item.contentPic!=""}}'> -->
+
+
+                  <!-- <view class='image-end'>+ {{item.picList.length}}
+                  </view> -->
+
+                  <!-- <block wx:for='{{item.contentPic}}' wx:key='id'>
+                    <block wx:if='{{index<3}}'>
+                      <image class='image' src='{{item}}' mode='aspectFill'
+                      catchtap='previewPic' data-pic-id='{{index}}' data-question-id='{{question_index}}'> 
+                      </image>
+                    </block> -->
+
+                    <!-- <block wx:else>
+
+                      <image class='image-end' src='{{item}}' mode='aspectFill'> 
+                      </image>
+
+                      <image class='image' src='{{item}}' mode='aspectFill'> 
+                      </image>
+
+                    </block> -->
+
+                  <!-- </block>
+                </view> -->
+
+
+              <!-- 问题音频 -->
+                <!-- <view class='voice-view' wx:if='{{item.contentVoice!=null && item.contentVoice!=""}}' catchtap='playVoice' id='{{question_index}}'></view> -->
+
+              <!-- 问题回答数 -->
+            
+                <view class='text2' >
+
+                  <text class='time'>
+                  </text>
+                  
+                  <view class='discuss-view'>
+                    <image class='discuss-image' src='../../src/pinglun.png'>
+                    </image>
+                    
+                    <text class='discuss-num'>{{item.answer_num}}
+                    </text>
+                  </view>
+                
+
+                </view>
+            
+        
+
+            </view>
+          </navigator>
+
+        </block>
+
+        <view style='height:30rpx;'>
+        </view>
+      </scroll-view >
+    
+
+    <!-- </view> -->
+  
+</swiper-item>
+<swiper-item >
+
+  <!-- 热榜列表 -->
+  <!-- <view class='content'> -->
+    <scroll-view style='height:{{swiper_height-statusBarHeight-45-90/bei}}px' class='scroll-view' scroll-y="true" bindscrolltolower='scrollToLower'>
+      <block wx:for="{{hotList}}" wx:for-index="hotList_index" >
+        <navigator url='../detail/detail?id={{item.question_id}}'>
+              <view class='hot-items' bindlongpress='deleteQuestion' data-question-id='{{item.question_id}}' data-question-list-id='{{hotList_index}}' hover-stop-propagation='{{true}}'  >
+
+
+
+            <!-- 问题框 -->
+        
+              <view class='text1' wx:if='{{item.question_title!=""}}'>
+
+                <!-- 右边的图片 -->
+                <!-- <image wx:if='{{item.contentPic!=""}}' class='hot-image' src='{{item.contentPic[0]}}' mode='aspectFill'></image> -->
+                <!-- 问题文字 -->
+                  <text style='color:#FFCC00; font-weight:700;'>{{hotList_index+1}}</text>
+                  <text style='margin-left:20rpx;'>{{item.question_title}}</text>
+
+                <view style='display:flex; flex-direction:column; justify-content:flex-between;'>
+                  <!-- 主题文字与底部文字之间的间隔 -->
+                    <view style='height:20rpx' wx:if='{{true}}'>
+                    </view> 
+                  
+
+                  <!-- 问题热度值 -->
+                
+                    <view class='text2' >
+
+                      <text style='font-size:28rpx; color:#cccccc;'>题主  :  {{item.nickname}}</text>
+                      
+                      <view class='discuss-view'>
+                        
+                        <text class='discuss-num'>热度 {{item.hot_rate}}
+                        </text>
+                      </view>
+                    
+
+                    </view>
+                </view>
+
+              </view>
+          
+      
+
+          </view>
+        </navigator>
+      </block>
+    </scroll-view>
+  <!-- </view> -->
+
+
+</swiper-item>
+
+</swiper>
+</view>
+
+<!--去掉<view class='issue-back' bindtap='issue'>
+  <image src='../../src/issue2.png' class='issue-pic' >
+  </image>
+</view> -->
+<!-- 添加 -->
+<movable-area class="movable-area">
+<!-- //根据x,y设置初次显示的位置 -->
+	<movable-view  animation="{{false}}" class="movable-view" direction='all' catchtap="bindtapwenti" x="{{x}}" y="{{y}}">
+		<image class="xf_image" src="../../src/issue2.png"></image>
+	</movable-view>
+</movable-area>
+
+

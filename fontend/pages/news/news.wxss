@@ -1,0 +1,96 @@
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+.news{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  margin-bottom: 2rpx;
+}
+
+.view1{
+  display: flex;
+  align-items: center;
+  height: 130rpx;
+  width: 100%;
+  font-size: 32rpx;
+  color: #81D3F8;
+
+}
+
+.head{
+  margin-left: 30rpx;
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 50rpx;
+
+}
+.nickname{
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  color: #81D3F8;
+}
+
+.view2{
+  padding-left: 120rpx;
+  padding-right: 30rpx;
+  padding-bottom: 40rpx;
+  margin-top: -20rpx;
+  font-size: 32rpx;
+  width: 600rpx;
+  word-break:break-all;
+}
+
+.view3{
+  display: flex;
+  flex-wrap: wrap;
+  width: 450rpx;
+  height: 100%;
+    padding-left: 120rpx;
+  padding-right: 30rpx;
+  padding-bottom: 40rpx;
+  margin-top: -20rpx;
+}
+.image{
+  width: 140rpx;
+  height: 140rpx;
+  background-color: #b2b2b2;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+.bighistory{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+
+}
+.history{
+  /* 添加修改 */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  color: #b2b2b2;
+  font-size: 30rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 110px;
+  height: 36px;
+  background-color: #7e7e7e;
+  border-radius: 3px;
+  color: #fefefe;
+  font-size: 15px;
+}

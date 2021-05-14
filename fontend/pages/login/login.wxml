@@ -1,0 +1,16 @@
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+
+</view>
+
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+<view style='display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:100rpx;'>
+  <image class='avator' src='../../src/pig.png'></image>
+  <text class='text'>欢迎来到“深大问答”小程序</text>
+  <button class='buttom'  bindtap='getUserProfile'>点击进入</button>
+</view>
+
+
+
+
+

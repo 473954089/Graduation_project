@@ -1,0 +1,772 @@
+
+.custom{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  background: #42C1FE;
+  z-index: 999;
+}
+.custom text{
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 500;
+  max-width: 280rpx;
+  margin-left: 50rpx;
+  padding-top: 500rpx;
+}
+.empty_custom{
+  height: 45px;
+  width: 100%;
+}
+
+
+
+.top-view{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-bottom: solid 1rpx #f5f5f5;
+  width: 100%;
+  height: auto;
+  /* 超出时换行? */
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space:nowrap;
+
+}
+.top-tag{
+  font-size: 28rpx;
+  color: #999999;
+  background-color: #f5f5f5;
+  margin-left: 40rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  padding-right: 10rpx;
+  padding-bottom: 10rpx;
+  border-radius: 5rpx;
+}
+
+
+.answer_num{
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* 修改了举例左边的距离 */
+.top-avator{
+  position: relative;
+  top: 5rpx;
+  left:30rpx;
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 35rpx;
+  margin-right: 20rpx;
+}
+/* 增加了昵称属性设置 */
+.nickname{
+  position: absolute;
+  left: 105rpx;
+  margin-top: 20rpx;
+  color: #746c6c;
+  font-weight: 600;
+  font-size: 31rpx;
+  margin-left: 20rpx;
+  width: 460rpx;
+}
+/* 增加的删除按键,对比用户id,非目标用户,弹出"只可以删除自己发出的内容哦"目标用户弹出"是否删除此内容,确定执行删除操作 */
+.chuli{
+  width: 100%;
+  height: 70rpx;
+  background-color: #ffffff;
+
+}
+.chuli1{
+  width: 40rpx;
+  height: 40rpx;
+  left: 200rpx;
+  position: relative;
+ top: 15rpx;
+margin : 10rpx;
+}
+.number{
+  display: flex;
+  justify-content: flex-end;
+  font-size:13px;
+}
+
+.content1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 750rpx;
+  height: 100%;
+  background-color: #ffffff;
+  margin-bottom: 40rpx;
+}
+
+
+.follow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 40rpx;
+  background-color: #81D3F8;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 5rpx;
+  float: right;
+  text-align: center;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  padding-top: 6rpx;
+  padding-bottom: 6rpx;
+}
+
+
+/* 对这一部分进行修改 */
+.question-title{
+  /* display: inline-block间隙 */
+  /*  */
+
+  margin-bottom: 5rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  font-weight: 550;
+  width: 650rpx;
+  height: 100%;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  letter-spacing: 1rpx;
+  color: #4d4848;
+
+}
+.question-text{
+  color: #746c6c;
+  text-indent:  2em;
+  display: inline-block;
+  font-size: 33rpx;
+  width: 650rpx;
+  height: 100%;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  /* margin-bottom: 20rpx; */
+  letter-spacing: 2rpx;
+  font-weight: 500;
+  
+}
+
+.shenglue{
+  /*将对象作为弹性伸缩盒子模型显示。(-webkit代表safari、chrome私有属性)*/
+  display: -webkit-box;
+
+  /*Safari、Opera 以及 Chrome 支持替代的 -webkit-box-orient 属性。
+  box-orient 属性规定框的子元素应该被水平或垂直排列。
+  当值为vertical从上向下垂直排列子元素。*/
+  -webkit-box-orient: vertical;
+
+  /*限制在一个块元素显示的文本的行数。
+  为了实现该效果，它需要组合其他外来的WebKit属性。(必须结合上面两个属性)*/
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+}
+.timeText{
+position: relative;
+left: 30rpx;
+  font-size: 14px;
+  color: #888888;
+  height: 40px;
+}
+.clean{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+
+
+.question-image1{
+  width: 280rpx;
+  height: 250rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+
+}
+.question-image2{
+  width: 280rpx;
+  height: 250rpx;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+}
+.board-view{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 90rpx;
+  border-top: solid 1rpx #f3f3f3;
+  margin-top: 20rpx;
+
+
+}
+.follow-num{
+  margin-left: 40rpx;
+  color: #9b9b9b;
+  font-size: 28rpx;
+}
+.pinglun{
+  width: 54rpx;
+  height: 46rpx;
+  margin-left: 60rpx;
+  opacity: 0.7;
+  
+
+}
+
+/* .text1{
+  padding-top: 50rpx;
+  padding-left: 40rpx;
+  padding-right: 30rpx;
+  font-size: 36rpx;
+  line-height: 60rpx;
+  word-break:break-all;
+}
+*/
+.images{
+  display: flex;
+  width: 540rpx;
+  height: 100%;
+  margin-left: 40rpx;
+  /* margin-bottom: 20rpx; */
+  padding-top: 20rpx;
+  flex-wrap: wrap;
+
+
+}
+
+.image{
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  background-color: #f2f2f2;
+} 
+
+
+
+
+
+
+
+
+.add-pic{
+  width: 60rpx;
+  height: 60rpx;
+  border: dashed 2rpx #81D3F8;
+  padding: 28rpx;
+}
+
+
+
+.button-view{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  height: 40rpx;
+  width: 750rpx;
+  padding-bottom: 30rpx;
+  padding-right: 30rpx;
+}
+.time{
+  font-size: 26rpx;
+  color: #a2a2a2;
+  margin-right: 50rpx;
+}
+
+
+
+
+
+
+
+
+
+.content2{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+.comment{
+  box-shadow: 0px 2px 5px 5px rgb(238, 238, 238);
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+
+}
+.message1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+}
+.head-view{
+  display: flex;
+  align-items: center;
+
+}
+.head{
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 30rpx;
+  background-color: #f2f2f2;
+  margin-left: 20rpx;
+
+}
+
+.good-view{
+  display: flex;
+  align-items: center;
+  margin-right: 40rpx;
+}
+.good-pic{
+  height: 28rpx;
+  width: 28rpx;
+  opacity: 0.6;
+}
+.good-num{
+  position: relative;
+  font-size: 26rpx;
+  color: #888888;
+  margin-left: 20rpx;
+ 
+
+}
+
+
+.message2{
+  padding-left: 90rpx;
+  padding-right: 90rpx;
+  padding-bottom: 20rpx;
+  padding-top: 0rpx;
+  margin-top: -20rpx;
+  font-size: 28rpx;
+  word-break:break-all;
+  letter-spacing: 6rpx;
+}
+.com-images{
+  display: flex;
+  flex-direction: row;
+  width: 510rpx;
+  height: 100%;
+  margin-left: 90rpx;
+  margin-bottom: 20rpx;
+  flex-wrap: wrap;
+
+}
+.com-images2{
+    display: flex;
+  flex-direction: row;
+  width: 510rpx;
+  height: 100%;
+  margin-left: 60rpx;
+  margin-bottom: 20rpx;
+  flex-wrap: wrap;
+}
+.com-image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  background-color: #f2f2f2;
+  border-radius: 3rpx;
+}
+.com-image2{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 5rpx;
+  margin-bottom: 10rpx;
+  background-color: #f2f2f2;
+  border-radius: 3rpx;
+}
+.second-com{
+  width: 250rpx;
+  height: 44rpx;
+  background-color: #f2f2f2;
+  border-radius: 22rpx;
+  margin-bottom: 10rpx;
+  margin-left: 250rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #888888;
+}
+.second-com-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 600rpx;
+  height: 100%;
+  border-radius: 5rpx;
+  background-color: #f2f2f2;
+  margin-bottom: 40rpx;
+  margin-left: 54rpx;
+  padding-top: 10rpx;
+  /* word-break:break-all; */
+
+
+}
+.second-com-item{
+  width: 100%;
+  height: 100%;
+}
+.second-com-people{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20rpx;
+
+}
+.second-com-people-avator{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 20rpx;
+
+
+}
+.second-com-people-nickname{
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #afafaf;
+}
+.second-com-text{
+  font-size: 28rpx;
+  width: 520rpx;
+  margin-left: 60rpx;
+  margin-bottom: 20rpx;
+  word-break:break-all;
+  letter-spacing: 6rpx;
+
+}
+
+
+
+
+
+
+
+.gap{
+  height: 128rpx;
+}
+
+
+
+
+
+.button-bar{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+  /* height: 260rpx; */
+  /* bottom: 278px; */
+  
+}
+
+.input-view{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  box-shadow: 0rpx 0rpx 10rpx 0rpx #d2d2d2;
+  padding-left: 50rpx;
+}
+.input-view-2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0rpx;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100rpx;
+  padding-left: 50rpx;
+  border-top: solid 1rpx #fbfbfb;
+  border-bottom: solid 1rpx #ffffff;
+}
+
+.input-view2{
+  width: 590rpx;
+ 
+}
+.input-view3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 50rpx;
+
+  
+}
+.input-view4{
+  width: 70rpx;
+  height: 70rpx;
+  border: solid 2rpx #ffffff;
+  border-radius: 35rpx;
+  
+  
+}
+.send{
+  width: 70rpx;
+  height: 70rpx;
+  border: solid 2rpx #ffffff;
+  opacity: 0.8;
+}
+
+.placeholder-class{
+  font-size: 32rpx;
+  color: #b2b2b2;
+  width: 400rpx;
+ 
+}
+
+.placeholder-style{
+  margin-right: 40rpx;
+  width: 100rpx;
+}
+
+
+
+.pic-bar{
+  width: 100%;
+  height: 160rpx;
+  background-color: #ffffff;
+  box-shadow: 0rpx 0rpx 10rpx 0rpx #d2d2d2;
+}
+.btn-images{
+  width: 690rpx;
+  height: 150rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  white-space:nowrap;
+  
+
+}
+.btn-image{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 10rpx;
+
+}
+.delete{
+  position: absolute;
+  height: 30rpx;
+  width: 30rpx;
+  margin-top: 0rpx;
+  margin-left: 90rpx;
+  z-index: 1000;
+}
+
+
+.btn-view{
+  display: flex;
+  align-items: center;
+  padding-left: 40rpx;
+  width: 100%;
+  height: 100rpx;
+  background-color: #ffffff;
+  border-top: solid 1rpx #fbfbfb;
+}
+
+
+
+
+
+
+/* 转移的匿名组件的样式 */
+.view1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #01ad01;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+}
+.view2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(100, 100, 100);
+}
+.image6{
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  z-index: 1;
+}
+.text1{
+  position: fixed;
+  margin-left: 6px;
+  font-size: 10px;
+  color: white;
+  
+}
+.text2{
+  position: fixed;
+  margin-left: 34px;
+  font-size: 10px;
+  color: white;
+  
+}
+
+
+
+/* 添加 */
+.btn-tip{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  color: #838383;
+
+  width: 100%;
+  height: 40px;
+
+}
+/* 添加底部按钮 */
+.b-bar{
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+
+}
+
+.b-view{
+  display: flex;
+  justify-content :space-evenly;
+  align-items: center;
+
+  width: 70px;
+  height: 40px;
+  /* background-color: red; */
+
+  font-size: 13px;
+  color: #918d8d;
+}
+
+.b-view-img{
+  width: 20px;
+  height: 20px;
+}
+
+.b-line{
+  width: 1px;
+  height: 10px;
+  background-color: #d3cece;
+}
+.zfBu{
+  position: absolute;
+  width: 220rpx;
+  height: 40px;
+  /* background-color: red; */
+  opacity: 0;
+}
+
+
+/* 回答界面样式 */
+
+.btn-bar{
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: fixed;
+  bottom: 0px;
+  
+
+  width: 100%;
+ 
+  background-color: rgb(255, 255, 255);
+}
+.ToUserBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  color: #999999;
+
+}
+.textVV{
+  padding: 20px;
+ 
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+ 
+}
+.textAA{
+  width: 100%;
+  /* height: 200px; */
+  background-color: #f5f5f5;
+  font-size: 15px;
+
+}
+.kukude{
+  font-size: 15px;
+}
+.imgVV{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin : 30px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+
+}
+.sendPic{
+  position: absolute;
+  right: 80rpx;
+  width: 32px;
+  height: 32px;
+}
+.back{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fanhui{
+  width: 30px;
+  height: 30px;
+}

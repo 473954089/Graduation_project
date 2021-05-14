@@ -1,0 +1,19 @@
+ 
+<!-- 首页导航栏搜索框自定义组件 -->
+<view class='nav' style='height: {{status + navHeight}}px'>  
+    
+
+    <view class='status' style='height: {{status}}px;{{containerStyle}}'></view>                              
+    <view class='navbar' style='height:{{navHeight}}px;{{containerStyle}}'>     
+
+    <view class="search-bar" bindtap="gotosearch">
+      <view class="backgr2"></view>
+      <image class="search-bar-pic" src="../../src/sou.png"></image>
+      <text class="search-bar-text">期末考试安排出炉</text>
+    
+    </view>
+    </view> 
+
+</view>
+
+ <view style='height: {{status + navHeight}}px;position:relative;'></view>

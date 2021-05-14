@@ -1,0 +1,41 @@
+<myheader3
+        titleText="个人资料编辑"
+></myheader3>
+
+<l-form name="student" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit">
+    <l-form-item label="昵称:" name="nickname" >
+        <l-input id="nickname" value="{{user.nickname}}" hide-label show-row="{{false}}" disabled/>
+    </l-form-item>
+
+    <l-form-item label="学号:" name="stu_num">
+        <l-input id="stu_num" value="{{user.stu_num}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+
+    <l-form-item label="专业:" name="major">
+        <l-input id="major" value="{{user.major}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+
+    <l-form-item label="性别:" name="gender" >
+        <l-radio-group id="gender" current="{{gender}}" placement="left" style="display:flex;justify-content:flex-start">
+            <l-radio key="1" style="display:inline-flex;margin-right:10px;margin-left:8px;">男</l-radio>
+            <l-radio key="0" style="display:inline-flex;">女</l-radio>
+        </l-radio-group>
+<!--        <l-input id="gender" value="{{user.gender}}" hide-label show-row="{{false}}"/>-->
+    </l-form-item>
+
+    <l-form-item label="个性签名:" name="personal_signature">
+        <l-input id="personal_signature" value="{{user.personal_signature}}" hide-label show-row="{{false}}"/>
+    </l-form-item>
+
+
+    <view slot="submit">
+        <l-button>点击修改</l-button>
+    </view>
+<!--    <view slot="reset">-->
+<!--        <l-button type="default" plain>清空</l-button>-->
+<!--    </view>-->
+</l-form>
+
+<view class="user_create_time">
+    您于{{user_create_time}}加入本社区
+</view>

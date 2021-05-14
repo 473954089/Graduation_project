@@ -1,0 +1,133 @@
+<!-- 顶部 -->
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+
+  <image style='height:{{capsule.height-16}}px; width:{{capsule.height-16}}px; padding-left:10px; padding-right:20px; margin-top:{{(capsule.top+capsule.buttom)/2-statusBarHeight-45}}px; position:fixed;' class='back-pic' src='../../src/back.png' bindtap='navigateBack'></image>
+
+</view>
+
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+
+
+
+
+
+
+<view>
+
+<view class='redDot1' wx:if='{{red1}}'></view>
+<view class='redDot2' wx:if='{{red2}}'></view>
+<view class='redDot3' wx:if='{{red3}}'></view>
+  <!-- 顶部导航标签 -->
+  <view class="swiper-tab">
+
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">评论        </view>
+    
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">私聊        </view>
+
+    <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">通知        </view>
+
+  </view>
+
+
+  <!-- 隔空 -->
+  <view style='height:100rpx;'></view>
+
+  <!-- 内容 -->
+  <swiper style='height:{{swiper_height-statusBarHeight-50-90/bei}}px' current="{{currentTab}}" duration="200" bindchange="swiperChange">
+ 
+    <!-- 评论 -->
+    <swiper-item class='comment-content'>
+      <scroll-view style='height:{{swiper_height-statusBarHeight-50-90/bei}}px' class='scroll-view' scroll-y="true" >
+
+    
+        <view class='comment-item' wx:for='{{newsList}}' bindtap='gotoDetail' data-question-id='{{item.questionId}}'>
+          <text class='people-time'>{{item.createdTime}}</text>
+          <view class='comment-people'>
+            <image class='people-avator' src='{{item.avatar[0]}}'></image>
+            <text class='people-nickname'>{{item.name}}</text>
+            <!-- <text style='margin-left:20rpx;font-size:28rpx;color:#999999'>-回复-</text>
+            <text class='people-nickname'>{{item.toName}}</text> -->
+            
+          </view>
+
+          <view class='comment-text'>{{item.contentText}}
+          </view>
+
+          <view class='comment-pic'>
+          </view>
+
+
+        </view>
+    
+
+        <view class='history-btn' bindtap='getHistoryList'>历史消息</view>
+
+
+
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 私聊 -->
+
+    <swiper-item class='message-content'>
+      <scroll-view style='height:{{swiper_height-statusBarHeight-50-45}}px' class='scroll-view' scroll-y="true" >
+
+
+
+        <view class='message-item' wx:for='{{chatList}}' bindtap='enterRoom' data-to-user-id='{{item.toUserId}}' data-room-id='{{item.roomId}}'>
+          <view class='unReadNum' wx:if='{{item.unreadNum}}'>{{item.unreadNum}}</view>
+          <image class='friend-avator' src='{{item.avatar}}'></image>
+          <view class='friend-nickname'>
+            <text style='margin-left:20rpx;'>{{item.name}}</text>
+            <text style='margin-right:30rpx;font-size:26rpx;font-weight:400; color:#cccccc;'>{{item.createdTime}}</text>
+          </view>
+          <view class='message-text'>{{item.message}}</view>
+        </view>
+
+
+
+      </scroll-view>
+    </swiper-item>
+
+
+    <!-- 通知 -->
+    <swiper-item class='inform-content'>
+      <scroll-view style='height:{{swiper_height-statusBarHeight-50-90/bei}}px' class='scroll-view' scroll-y="true" >
+
+
+
+        <view class='comment-item' wx:for='{{beGoodList}}' bindtap='gotoDetail' data-question-id='{{item.questionId}}'>
+          <text class='people-time'>{{item.createdTime}}</text>
+          <view class='comment-people'>
+            <image class='people-avator' src='{{item.avatar}}'></image>
+            <text class='people-nickname'>{{item.nickname}}</text>
+            
+          </view>
+
+          <view class='comment-text'>点赞了你的评论
+          </view>
+
+          <view class='your-comment-view'>{{item.commentText}}
+          </view>
+
+
+        </view>
+
+
+
+
+
+        
+
+        <view class='history-btn' bindtap='getHistoryBeGoodList'>历史点赞</view>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
+
+
+</view>

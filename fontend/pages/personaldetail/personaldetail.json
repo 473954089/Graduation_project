@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "myheader3": "../../component/myheader3/myheader3",
+    "l-input": "../../miniprogram_npm/lin-ui/input/index",
+    "l-form":"../../miniprogram_npm/lin-ui/form/index",
+    "l-form-item":"../../miniprogram_npm/lin-ui/form-item/index",
+    "l-button":"../../miniprogram_npm/lin-ui/button/index",
+    "l-radio-group":"../../miniprogram_npm/lin-ui/radio-group/index",
+    "l-radio":"../../miniprogram_npm/lin-ui/radio/index"
+  }
+}

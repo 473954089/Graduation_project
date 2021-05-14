@@ -1,0 +1,90 @@
+<!--pages/search/search.wxml-->
+<myheader3
+  titleText="社区问答搜索"
+></myheader3>
+<view class="head_search" >
+    <input class="text_search colorGray" type='text' confirm-type="search" placeholder="请输入关键词" placeholder-class="colorGray" bindfocus="bindShowLog" bindinput="bindInputSchool" bindconfirm="bindGoSearch" value="{{inputVal}}"></input>
+    <view class="icon_search" bindtap="bindGoSearch"><image class="icon_search1" src='../../src/sou.png'></image></view>
+  </view>
+<!-- bindfocus="bindShowLog"  显示搜索历史
+ bindinput="bindInputSchool"  输入时进行比较,显示相同搜索历史
+ value="{{inputVal}}"  搜索框的值
+bindtap="bindGoSearch" 设置搜索历史,-->
+
+
+<!-- hidden="{{searchIsHidden}}" 判断隐藏条件 -->
+<!-- bindtap='bindSearchHidden' 点击隐藏列表???但没有实现 -->
+  <view class="result_search" hidden="{{searchIsHidden}}" bindtap='bindSearchHidden' >
+    <view class='list_search'>
+<!-- wx:for="{{searchList}}"循环输出列表 -->
+<!-- wx:key="{{index}}" wx:if="{{index<4 || searchAllShow}}"使用if语句时,用key进行判断 -->
+<!--  catchtap="bindGoSchool"被点击的进行搜索-->
+      <view class='li_list_search' wx:for="{{searchList}}" wx:key="{{index}}" wx:if="{{index<3 || searchAllShow}}" catchtap="bindGoSchool" data-item="{{item}}">
+          <image class="waitingimage"  src="../../src/sort.png"></image>
+        <text class="pl30_colGray">{{item}}</text>
+          <image class='icon_cancel_rightFlex' catchtap="bindDelLog" data-item="{{item}}" src="../../src/clear.png"></image>
+
+      </view>
+    </view>
+    <view class="li_list_search" catchtap="bindSearchAllShow" wx:if="{{searchList.length>3 && !searchAllShow}}">
+      <text class="allin">全部搜索记录</text>
+      <view class='icon-down rightFlex'>
+        <image class='zhangkai' src="../../src/zhangkai.png"></image>
+      </view>
+    </view>
+    <view class='li_list_search' bindtap="bindClearSearch" wx:if="{{searchList.length>0 && searchAllShow}}">
+      <text class="ui-col colGray tc">清除搜索记录</text>
+      <image class='icon_cleanlishi'  src="../../src/clean.png"></image>
+    </view>
+  
+  <!-- wx:if="{{!searchAllShow || searchList.length==0}}" -->
+    <view class='hots_search' wx:if="{{!searchAllShow || searchList.length==0}}" >
+      <view class='touView'>
+        <image class="touImg" src="../../src/jqxyrd.png"></image>
+      <view class='toutext'>近期热点</view>
+    </view>
+      <view class="list_hotsSearch">
+        <text wx:for="{{hotsSearch}}" wx:key="{{index}}" catchtap="bindGoSchool" data-item="{{item}}">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+
+
+<!-- 添加,需要添加展示参数 -->
+<view class='content' hidden="{{neirong}}" style="margin-top:30px!important;">
+<!-- gap1未有样式 -->
+<view class='gap1'>
+</view>
+
+<!-- 问题 -->
+<block wx:for='{{searchQuestionList}}' wx:key='id'>
+  <navigator url='../detail/detail?id={{item.question_id}}' >
+    <view class='items' >
+    <!-- 问题标题 -->
+    <view class='text1' wx:if='{{item.question_title!=""}}' style="font-size:16px!important;font-weight:bold;">
+      <text >{{item.question_title}}
+      </text>
+    </view>
+      <!-- 问题文字 -->
+      <!-- <block > -->
+        <view class='text1' wx:if='{{item.question_content!=""}}'>
+          <text >{{item.question_content}}
+          </text>
+        </view>
+        <view class='text2' >
+          <text class='time'>
+          </text>
+          <view class='discuss-view'>
+            <image class='discuss-image' src='../../src/pinglun.png'>
+            </image>
+            <text class='discuss-num'>{{item.answer_num}}
+            </text>
+          </view>
+        </view>
+    </view>
+  </navigator>
+</block>
+<view style='height:30rpx;'>
+</view>
+</view>

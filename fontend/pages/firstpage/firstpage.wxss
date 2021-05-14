@@ -1,0 +1,452 @@
+
+
+.custom{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  background-color: #42C1FE;
+  z-index: 999;
+}
+
+.shenglue{
+  /*将对象作为弹性伸缩盒子模型显示。(-webkit代表safari、chrome私有属性)*/
+  display: -webkit-box;
+
+  /*Safari、Opera 以及 Chrome 支持替代的 -webkit-box-orient 属性。
+  box-orient 属性规定框的子元素应该被水平或垂直排列。
+  当值为vertical从上向下垂直排列子元素。*/
+  -webkit-box-orient: vertical;
+
+  /*限制在一个块元素显示的文本的行数。
+  为了实现该效果，它需要组合其他外来的WebKit属性。(必须结合上面两个属性)*/
+  -webkit-line-clamp: 2;
+
+  overflow: hidden;
+}
+
+.custom text{
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 500;
+  max-width: 280rpx;
+  margin-left: 50rpx;
+  padding-top: 500rpx;
+}
+.empty_custom{
+  height: 45px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+.swiper-tab{
+  display: flex;
+  /* 添加修改 */
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 750rpx;
+  height: 75rpx;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 1;
+
+}
+/* 添加修改,建议修改为前后字体一致 */
+.tab-item{
+  font-size: 16px;
+  color: #7e7e7e;
+ 
+  line-height: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 90rpx;
+  margin-right: 90rpx;
+
+}
+.on{
+  color: #0086c9;
+  font-weight: 600;
+  margin-left: 90rpx;
+  margin-right: 90rpx;
+  /* border-bottom: solid 6rpx #83c4e2; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+
+.sw-line{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 22px;
+  height: 3px;
+  background-color: #0099ff;
+  border-radius: 1px;
+  z-index: 1;
+  position: fixed;
+  margin-top: 3px;
+
+}
+.swBline1{
+  width: 14%;
+  height: 100%;
+  background-color: rgb(0, 132, 255);
+
+}
+.swBline2{
+  width: 8%;
+  height: 100%;
+  /* background-color: red; */
+
+}
+.myline{
+  width: 80rpx;
+  height: 20rpx;
+}
+
+.swiper {
+  height: 2100px;
+}
+
+.tip-view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: fixed;
+  margin-left: 20rpx;
+  width: 710rpx;
+  height: 80rpx;
+  background-color: rgba(145, 193, 255, 0.795);
+  color: #ffffff;
+  z-index: 9;
+
+}
+/* .top-text1{
+  font-size: 30rpx;
+  color: rgb(211, 211, 211);
+  margin-left: 200rpx;
+}
+.top-select-text1{
+  font-size: 30rpx;
+  color: #81D3F8;
+  margin-left: 200rpx;
+  border-bottom: solid 4rpx #00aeff;
+  line-height: 78rpx;
+}
+.top-text2{
+  font-size: 30rpx;
+  color: rgb(196, 195, 195);
+  margin-left:200rpx;
+}
+.top-select-text2{
+  font-size: 30rpx;
+  color: #81D3F8;
+  margin-left:200rpx;
+  border-bottom: solid 4rpx #00aeff;
+  line-height: 78rpx;
+} */
+
+.searchBar{
+              
+  position: fixed;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(248, 248, 248);
+  border-radius: 60rpx;
+  
+  
+}
+
+.home[plain]{
+  border:none;
+}
+
+.home{
+   overflow:hidden;  
+  background-color: #f2f2f2;
+  margin-right: 30rpx;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius:90rpx;
+  padding: 0;
+  
+}
+.red-dot{
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+  background-color: red;
+  margin-left: 706rpx;
+  margin-top: -24rpx;
+
+
+}
+
+
+
+
+.searchBar-PIC{
+  margin-left: 20rpx;
+
+  align-self: center;
+  
+}
+.gap0{
+  width: 100%;
+  height: 90rpx;
+}
+.gap1{
+  width: 100%;
+  height: 10rpx;
+  background-color: #F2F2F2;
+}
+
+
+.content{
+  display: flex;
+  flex-direction:column; 
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+
+
+.ava-nic-view{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 60rpx;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.avatar{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  
+}
+
+.items{
+  display: flex;
+  width: 650rpx;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 2px 2px rgb(241, 241, 241);
+  flex-direction: column;
+  border-radius: 10rpx;
+  border: 1rpx;
+  border-color: #d2d3d3;
+  margin-left: 20rpx;
+
+  margin-top: 10rpx;
+  padding: 30rpx;
+
+
+}
+
+.hot-items{
+  display: flex;
+  width: 650rpx;
+  height: 100%;
+  background-color: #ffffff;
+  /* box-shadow: 2px 2px 2px 2px rgb(255, 255, 255); */
+  flex-direction: column;
+
+  border: 1rpx;
+  border-color: #d2d3d3;
+  margin-left: 20rpx;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+  padding: 30rpx;
+
+
+}
+.hot-image{
+  float: right;
+  margin-left: 20rpx;
+  height: 180rpx;
+  width: 250rpx;
+  border-radius: 10rpx;
+}
+.title1{
+  width: 650rpx;
+  font-size: 40rpx;
+  line-height: 54rpx;
+  word-break:break-all;
+  font-weight:bold;
+}
+
+.text1{
+
+  width: 650rpx;
+  font-size: 32rpx;
+  line-height: 54rpx;
+  word-break:break-all;
+
+}
+
+.images{
+  display: flex;
+  width: 540rpx;
+  height: 170rpx;
+  background-color: #ffffff;
+
+
+  
+}
+
+.image{
+  background-color: #f2f2f2;
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 10rpx;
+
+
+}
+.image-end{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  width: 170rpx;
+  height: 170rpx;
+  margin-right: 10rpx;
+  margin-left: 355rpx;
+  opacity: 0.5;
+  color: #00aeff;
+  font-size: 48rpx;
+
+}
+
+/*去掉
+ .issue-pic{
+  
+  width: 148rpx;
+  height: 92rpx;
+  right: 40rpx;
+  bottom: 100rpx;
+  position: fixed;
+} */
+/* 添加 */
+.movable-area{
+  pointer-events:none;
+  /* 这个属性设置为none,让所有事件穿透过去 */
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 194rpx;
+  left: 0;
+  right: 0;
+  bottom: 80rpx;
+}
+.movable-view{ 
+  pointer-events:auto;
+  /* 重设为auto,覆盖父属性设置 */
+  height: 100rpx;
+  width: 100rpx;
+  /* background: red; */
+  scale:true;
+}
+/* 如何设置图标使其在中间？ */
+.xf_image{
+  z-index: 0;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+ 
+
+.scroll-view{
+  -webkit-overflow-scrolling: touch
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.voice-view{
+  background-color: red;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 50rpx;
+}
+
+
+.text2{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.time{
+  font-size: 24rpx;
+  margin-left:30rpx; 
+  color: #a2a2a2;
+}
+
+
+.discuss-view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discuss-image{
+  margin-right: 20rpx;
+  margin-top: 0rpx;
+  width: 40rpx;
+  height: 35rpx;
+  opacity: 0.3;
+}
+
+.discuss-num{
+  margin-top: 0rpx;
+  font-size: 28rpx;
+  color: #acacac;
+}
+
+::-webkit-scrollbar{
+
+width: 0;
+
+height: 0;
+
+color: transparent;
+
+}

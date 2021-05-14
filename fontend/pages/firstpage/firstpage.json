@@ -1,0 +1,7 @@
+{
+   "enablePullDownRefresh": true,
+   "usingComponents": {
+      "myheader2": "../../component/myheader2/myheader2"
+    }
+    
+}

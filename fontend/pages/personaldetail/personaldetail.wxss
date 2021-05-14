@@ -1,0 +1,14 @@
+.l-form-btn-class{
+    display: flex;
+    justify-content: center;
+    margin-top: 50rpx;
+}
+
+.l-form-submit-class{
+    background: #3d83fa !important;
+}
+
+.user_create_time{
+   margin-top: 50px;
+    text-align:center;
+}

@@ -1,0 +1,163 @@
+
+
+<myheader3
+  titleText="发布问题"
+></myheader3>
+
+
+
+
+
+
+
+<!-- form表单 -->
+<view style='height:20rpx; background-color:#ffffff'></view>
+<form bindsubmit='submit' report-submit='true'>
+
+  <view class='input-area'>
+
+
+
+    <!-- 上传标题 -->
+    <view class='titlearea'>
+      <input class='input' name='tittle' placeholder='请输入标题'
+      placeholder-class='placeholder-class0'
+      placeholder-style='placeholder-style'
+      bindfocus='bindfocus'
+      bindblur='bindblur'
+      focus='input-focus'
+      value='{{tittle}}'
+      bindinput='bindinput'>      
+      </input>
+    </view>
+
+
+    <!-- 上传文字 -->
+    <view class='textarea0'>
+      <textarea class='textarea' name='content' placeholder='请写下你的问题~' placeholder-class='placeholder-class' placeholder-style='placeholder-style'
+       bindfocus='bindfocus'
+        bindblur='bindblur'
+      maxlength='10000'
+      value='{{content}}'
+     adjust-position='false'
+      bindinput='bindtextarea'>
+      </textarea>
+    </view>
+
+
+    <!-- 添加语音 -->
+    <!-- <view class='voice-view' bindtap='playRecord' wx:if="{{voice_src!=''}}">
+      <text style='font-size:30rpx;margin-right:40rpx;'>{{voice_time}}″</text>
+      <image class='voice-pic' src='../../src/voice{{pic_num}}.png'></image>
+      <image class='delete-voice' src='../../src/delete3.png' bindtap='deleteVoice'></image>
+    </view> -->
+
+    <!-- 添加标签 -->
+    <!-- <view class='tagg-view'>
+      <picker name='sort' bindchange='changePicker' value='{{picker_index}}' range='{{picker_list}}'>
+        <view class='tagg' >
+        
+          <view>{{picker_list[picker_index]}}</view>
+        
+        </view>
+      </picker>
+    </view> -->
+
+
+    <!-- 上传图片 -->
+    <!-- <view class='pic-content'>
+
+      <view class='add-pic' bindtap='choosePic'>
+        <image class='add' src='../../src/add.png'>
+        </image>
+      </view>
+      
+      <block wx:for="{{picList}}"  wx:key="{{item.id}}">
+        <view class='pic-view' >
+
+          <image class='delete' src='../../src/delete4.png' bindtap='deletePic' data-index="{{index}}">
+          </image>
+          
+          <image class='pic-class' src='{{item}}' mode='aspectFill' bindtap='previewPic' data-src="{{item}}">
+          </image>
+        
+          
+        </view>
+      
+      </block>
+      
+    </view> -->
+
+    <view class='delete-all'>
+      <image class='clear' bindtap='clearALL' src='../../src/clean.png' wx:if="{{content}}"></image>
+    </view>
+
+
+
+
+
+
+  </view>  
+
+  <!-- 发送按钮 -->
+  <!-- <button class='issue-button' form-type='submit' bindtap='submitAll'>发  布
+  </button> -->
+
+
+
+
+
+<!-- 录音按钮 --><!-- 上线删除 -->
+<!-- <view animation="{{animationData}}" class='record-btn' wx:if='{{voice_btn}}' bindtouchstart='startRecord' bindtouchend='stopRecord'></view> -->
+
+<!-- 底栏操作栏 -->
+<!-- 上线删除 -->
+<view class='btn-view' style='bottom:{{b_height}}px;'>
+
+
+
+<view class='btn-view' style='bottom:0px;'>
+<!-- 上线删除 -->
+  <!-- <image class='emoji' src='../../src/emoji0.png'></image> -->
+
+
+  <!-- <image class='picture' src='../../src/picture.png'></image> -->
+
+
+  <!-- 上线删除 -->
+ <!-- <image class='voice' src='../../src/voice6.png' bindtap='addVoiceBtn'></image> -->
+
+
+
+    <!--<image class='video' src='../../src/record.png'></image>
+  <image class='tag' src='../../src/tag.png'></image>
+  <image class='location' src='../../src/location.png'></image> -->
+
+    <!-- <view class='tagg' bindtap='changAnonymous'>
+      <view wx:if='{{anonymous==0}}'>匿名</view>
+      <view wx:if='{{anonymous==1}}'>实名</view>
+    </view> -->
+
+    <!-- <myswitch name='anonymous' style='margin-left:20rpx;'  bindtap='getState'></myswitch> -->
+    <!-- 转移的匿名组件 -->
+<!-- <view class='view1' bindtap='change' style='background-color:{{bgcolor}}'>
+  <view class='view2' animation="{{animationData}}">
+    <image class='image' src='{{avatar}}' wx:if='{{state==0}}'></image>
+  </view>
+  <text class='text1' wx:if='{{state==1}}'>匿名</text>
+  <text class='text2' wx:if='{{state==0}}'>实名</text>
+ -->
+ </view>
+ </view>
+    <!-- 转移的匿名组件 -->
+ 
+
+ <!-- 上线删除 -->
+<!--   <view class='tagg' bindtap='addTittle'>-->
+<!--      <view wx:if='{{add_tittle==0}}'>添加标题</view>-->
+<!--      <view wx:if='{{add_tittle==1}}'>隐藏标题</view>-->
+<!--    </view>-->
+
+    <button form-type='submit' class='sub' >发布</button>
+</form> 
+<!-- </view> -->

@@ -1,0 +1,67 @@
+<myheader3
+  titleText="回答详情"
+></myheader3>
+
+<view style="margin-bottom:10px">
+<!--  回答区-->
+  <l-card type="avatar" image="{{answer.avatar}}"
+          plaintext="{{true}}"
+          full="{{true}}"
+          title="{{answer.nickname}}">
+    <view class="content">
+      {{answer.answer_content}}
+    </view>
+    <view style="margin-top: 15px;display:flex;justify-content:space-between">
+      <view style=""><l-tag shape="circle" style="display:flex;" size="large" bindtap="giveLike">点赞</l-tag></view>
+      <view style="display:flex">{{answer.like_num}}喜欢 {{answer.comment_num}}评论数</view>
+    </view>
+  </l-card>
+</view>
+<view style="margin-bottom:6px">评论</view>
+<!--  评论区-->
+  <view wx:for="{{comment}}" wx:for-item="i">
+    <l-card type="avatar" image="{{i.avatar}}" bindlongtap="pinglunhuifu" data-from-uuid="{{i.from_uuid}}" data-nickname="{{i.nickname}}"
+            plaintext="{{true}}"
+            full="{{true}}"
+            title="{{i.nickname}}">
+      <view class="content">
+        {{i.comment_content}}
+      </view>
+      <view style="margin-top: 15px;">
+        <view style="float: right"></view>
+      </view>
+    </l-card>
+<!--    评论回复-->
+    <view wx:for="{{i.commentReplyList}}" wx:for-item="j" class="reply">
+      <l-card type="primary"
+              plaintext="{{true}}"
+              full="{{true}}"
+              >
+        <view class="content">
+          {{j.from_user}} 回复了 {{j.to_user}}:{{j.reply_content}}
+        </view>
+        <view style="margin-top: 15px;">
+        </view>
+      </l-card>
+    </view>
+  </view>
+
+<view style="transform: translate(-50%, -50%);">{{to_nickname}}</view>
+
+
+<view style="width:100%;">
+
+  <l-form name="newComment" l-form-btn-class="l-form-btn-class" bind:linsubmit="submit" style="width=100%;background-color:#fff;position:fixed;bottom:0;left:0;">
+
+    <l-form-item name="comment" label-width="0px" style="background-color:#fff;" >
+<!--      <l-input id="studentName" value="{{student.name}}" hide-label show-row="{{false}}"/>-->
+     <l-input id="comment" label="评论"  placeholder="友善的评论是交流的起点~" class="comment" style="width:100%;" hide-label value="{{newAnswer}}"  data-prop="newComment">
+<!--        <button slot="right" class="submit" bindtap="giveComment">评论</button>-->
+      </l-input>
+    </l-form-item>
+    <view slot="submit" style="height: 40px;width:50px;right:30px;bottom:-5px;position:fixed;">
+      <l-button>评论</l-button>
+    </view>
+  </l-form>
+</view>
+

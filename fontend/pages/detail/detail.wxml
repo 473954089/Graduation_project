@@ -1,0 +1,95 @@
+
+<myheader3
+  titleText="问题详情"
+></myheader3>
+
+
+<!-- 顶部分类和发布者头像 ,修改参数-->
+<view class='top-view'>
+  <image class='top-avator' src='../../src/ask.png' bindtap='touchAvatar'></image>
+  <text class='nickname'>{{nickname}}</text>
+</view>
+
+<view style='background-color:#ffffff; width:100%; height:100%; position:relative;'>
+    <view class='question-title' >{{question_title}}</view>
+    <view class='question-text' >{{question_content}}</view>
+</view>
+
+<view class='chuli' style="margin-bottom:5px;">
+  <!-- 增加一个时间组件,-->
+  <text class="timeText">{{question.question_time}}</text>
+</view>
+
+<view class="answer_num">回答数{{question.answer_num}}</view>
+
+<!-- 中间的回答内容,按照首页样式展示/跟一二级评论区 -->
+<view wx:for="{{answerList}}" style="margin-bottom:5px;">
+  <navigator url="../answer/answer?id={{item.answer_id}}">
+  <l-card type="avatar" l-class="card" image="{{item.avatar}}" 
+    full="{{true}}"
+     title="{{item.nickname}}" describe="1分钟前来过">
+        <!-- 此处为content -->
+        <view class="avter-content shenglue" style="text-indent:  2em;font-size:15px;">
+        {{item.answer_content}}
+        </view>
+        <view class="avter-share-container">
+          
+        <view class="like-container">
+            <!-- <l-icon name="like" color="#666" size="28" /> -->
+            <view class="number">{{item.like_num}}喜欢  {{item.comment_num}}评论</view>
+        </view>
+
+        </view>
+  </l-card>
+  </navigator>
+</view>
+
+<!-- 添加底部终点线 -->
+<view class="btn-tip">-----我ke是有底线的-----</view>
+<!-- 底部回答跟评论界面 -->
+<view class="b-bar" >
+<view class="b-view" bindtap="huida">
+  <image class="b-view-img" src="../../src/pinglun2.png" ></image>
+  <text>回答</text>
+</view>
+<view class="b-line"></view>
+<view class="b-view">
+  <image class="b-view-img" src="../../src/zhuanfa2.png"></image>
+  <text>转发</text>
+  <button class="zfBu" open-type="share"></button>
+</view>
+</view>
+
+
+<!-- 回答区域 -->
+<!-- 评论区域 -->
+<view class="btn-bar" style="height:{{hei}}px; bottom:{{-hei}}px;" animation="{{ppp}}" >
+
+<view class="ToUserBar">
+
+</view>
+
+<view class="textVV" hidden="{{!isUp}}">
+  <!-- 缺少参数设置,后期补充data参数 -->
+  <textarea
+    placeholder='快到碗里来>_<'
+    placeholder-class="kukude"
+    class="textAA"
+    maxlength="-1"
+    focus="{{false}}"
+    adjust-position="{{false}}"
+    bindinput="input"
+    value="{{newAnswer}}"
+  ></textarea>
+
+  
+</view>
+<!-- 发送数据等待威成写一下 -->
+<view class="imgVV">
+  <image class="clean" wx:if="{{newAnswer}}" src="../../src/clean.png" bindtap="clean"></image>
+  <image class="sendPic" src="../../src/send.png" bindtap="send"></image>
+</view>
+<view class="back" bindtap="ppp_animation">
+  <image class="fanhui" src="../../src/fanhui.png"></image>
+</view>
+</view>

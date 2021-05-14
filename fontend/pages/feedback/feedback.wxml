@@ -1,0 +1,79 @@
+<!-- 表情的导入文件 -->
+<!-- <import src="../../utils/WxEmojiView/WxEmojiView.wxml"/> -->
+
+
+
+
+<!-- 顶部 -->
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+<image style='height:{{capsule.height-16}}px; width:{{capsule.height-16}}px; padding-left:10px; padding-right:20px; margin-top:{{(capsule.top+capsule.buttom)/2-statusBarHeight-45}}px; position:fixed;' class='back-pic' src='../../src/back.png' bindtap='navigatBack'></image>
+
+</view>
+
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+
+
+
+
+
+
+<!-- form表单 -->
+<view style='height:20rpx; background-color:#ffffff'></view>
+<form bindsubmit='submit' report-submit='true'>
+
+  <view class='input-area'>
+
+
+
+    <!-- 上传标题 -->
+    <view class='titlearea' wx:if='{{add_tittle==1}}'>
+      <input class='input' name='tittle' placeholder='请输入标题'
+      placeholder-class='placeholder-class0'
+      placeholder-style='placeholder-style'
+      bindfocus='bindfocus'
+      bindblur='bindblur'
+      focus='input-focus'
+      value='{{tittle}}'
+      bindinput='bindinput'>      
+      </input>
+    
+    
+    </view>
+
+
+    <!-- 上传文字 -->
+    <view class='textarea0'>
+      <textarea class='textarea' name='content' placeholder='请写下你要反馈的问题~' placeholder-class='placeholder-class' placeholder-style='placeholder-style'
+       bindfocus='bindfocus'
+        bindblur='bindblur'
+      maxlength='10000'
+      value='{{content}}'
+     adjust-position='false'
+      bindinput='bindtextarea'>
+      </textarea>
+    </view>
+
+    <view class='delete-all'>
+      <view class='clear' bindtap='clearALL'>清空
+      </view>
+    </view>
+
+
+
+
+
+
+  </view>  
+
+
+<view class='btn-view' style='bottom:0px;'>
+
+
+
+    <button form-type='submit' class='sub' >发送给我们</button>
+
+</view>
+</form> 

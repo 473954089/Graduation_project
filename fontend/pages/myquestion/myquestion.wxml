@@ -1,0 +1,103 @@
+<!-- 顶部 -->
+
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+
+  <image style='height:{{capsule.height-16}}px; width:{{capsule.height-16}}px; padding-left:10px; padding-right:20px; margin-top:{{(capsule.top+capsule.buttom)/2-statusBarHeight-45}}px; position:fixed;' class='back-pic' src='../../src/back.png' bindtap='navigateBack'></image>
+
+  <text>历史提问</text>
+
+</view>
+
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view>
+
+
+
+
+
+
+
+
+<!-- 问题列表 -->
+<view class='content'>
+
+  <view class='gap1'>
+  </view>
+  <!-- 问题 -->
+  <block wx:for='{{questionList}}' wx:key='id'>
+    <l-slide-view height="160" width="750" slide-width="100" auto-close>
+      <view slot="left" class="left">
+        <navigator url='../detail/detail?id={{item.question_id}}'>
+          <view class='items' >
+
+            <!-- 问题文字 -->
+            <!-- <block > -->
+            <view class='text1' wx:if='{{item.contentText!=""}}'>
+              <text >{{item.question_title}}
+              </text>
+            </view>
+
+            <!-- 文字与图片之间的间隔 -->
+            <view style='height:10rpx' wx:if='{{item.contentText}}&&{{item.contentPic}}'>
+            </view>
+            <!-- </block> -->
+            <!-- 问题图片 -->
+            <!-- <view class='images' wx:if='{{item.contentPic!=""}}'> -->
+
+
+            <!-- <view class='image-end'>+ {{item.picList.length}}
+            </view> -->
+
+            <!--     <block wx:for='{{item.contentPic}}' wx:key='id'>
+                   <block wx:if='{{index<3}}'>
+                     <image class='image' src='{{item}}' mode='aspectFill'>
+                     </image>
+                   </block> -->
+
+            <!-- <block wx:else>
+
+              <image class='image-end' src='{{item}}' mode='aspectFill'>
+              </image>
+
+              <image class='image' src='{{item}}' mode='aspectFill'>
+              </image>
+
+            </block> -->
+
+            <!-- </block> -->
+            <!-- </view> -->
+
+
+
+            <!-- 问题回答数 -->
+
+            <view class='text2' >
+
+              <text class='time'>
+              </text>
+
+              <view class='discuss-view'>
+                <image class='discuss-image' src='../../src/pinglun.png'>
+                </image>
+
+                <text class='discuss-num'>{{item.answer_num}}
+                </text>
+              </view>
+
+
+            </view>
+
+
+
+          </view>
+        </navigator>
+      </view>
+      <view slot="right" class="right" width="100" bindtap="deleteQuestion"  data-question-id='{{item.question_id}}'>
+        删除
+      </view>
+
+    </l-slide-view>
+  </block>
+
+ 
+
+</view>

@@ -1,0 +1,55 @@
+/* pages/login/login.wxss */
+.custom{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  background: #42C1FE;
+  z-index: 999;
+}
+.custom text{
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 500;
+  max-width: 280rpx;
+  margin-left: 50rpx;
+  padding-top: 500rpx;
+}
+.empty_custom{
+  height: 45px;
+  width: 100%;
+}
+
+
+
+
+.avator{
+  
+  width: 148rpx;
+  height: 148rpx;
+
+}
+.text{
+  font-size: 34rpx;
+  margin-top: 100rpx;
+  color: #5a5a5a;
+
+}
+.buttom{
+
+  width: 300rpx;
+  height:76rpx;
+  line-height: 76rpx;
+  font-size: 36rpx;
+  border-radius: 40rpx;
+  margin-top: 100rpx;
+  background-color: #42C1FE;
+  color: #ffffff;
+  box-shadow: 1px 1px 1px 1px rgb(225, 241, 255);
+}
+.buttom::after{
+  border:none;
+}

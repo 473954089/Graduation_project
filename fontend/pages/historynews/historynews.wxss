@@ -1,0 +1,267 @@
+
+.custom{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 45px;
+  background: #42C1FE;
+  z-index: 999;
+}
+.custom text{
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 500;
+  max-width: 280rpx;
+  margin-left: 50rpx;
+  padding-top: 500rpx;
+}
+.empty_custom{
+  height: 45px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.swiper-tab{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #ffffff;
+  position: fixed;
+  border-bottom: solid 10rpx #f2f2f2;
+  z-index: 1;
+
+}
+.tab-item{
+  font-size: 30rpx;
+  color: rgb(102, 102, 102);
+  margin-left: 150rpx;
+  line-height: 78rpx;
+
+}
+.on{
+  color: #81D3F8;
+  border-bottom: solid 4rpx #00aeff;
+}
+.redDot1{
+  position: fixed;
+  background-color: #f75959;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  margin-left: 200rpx;
+  margin-top: 16rpx;
+  z-index: 9;
+
+}
+.redDot2{
+  position: fixed;
+  background-color: #f75959;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  margin-left: 407rpx;
+  margin-top: 16rpx;
+  z-index: 9;
+
+}
+.redDot3{
+  position: fixed;
+  background-color: #f75959;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  margin-left: 614rpx;
+  margin-top: 16rpx;
+  z-index: 9;
+
+}
+
+
+
+
+
+
+
+
+
+/* 评论的样式 */
+.comment-content{
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+
+}
+.comment-item{
+  margin-left: 20rpx;
+  width: 710rpx;
+  background-color: #ffffff;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  margin-bottom: 4rpx;
+  
+
+}
+.comment-people{
+ 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 520rpx;
+  height: 80rpx;
+
+  
+}
+.people-avator{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  margin-left: 20rpx;
+  
+}
+.people-nickname{
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #999999;
+
+}
+.people-time{
+  float: right;
+  font-size: 24rpx;
+  color: #cccccc;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+}
+.comment-text{
+  width: 600rpx;
+  font-size: 28rpx;
+  margin-left: 86rpx;
+}
+.comment-pic{
+
+}
+.history-btn{
+  width: 710rpx;
+  height: 90rpx;
+  background-color: #ffffff;
+  padding-top: 10rpx;
+  margin-left: 20rpx;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b2b2b2;
+  font-size: 30rpx;
+}
+
+
+/* 私聊的样式 */
+.message-content{
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%; */
+ 
+ 
+
+}
+.scroll-view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+  justify-content: flex-start;
+  width: 100%;
+ 
+}
+::-webkit-scrollbar{
+
+width: 0;
+
+height: 0;
+
+color: transparent;
+
+}
+.message-item{
+  width: 710rpx;
+  height: 160rpx;
+  margin-left: 20rpx;
+  background-color: #ffffff;
+  padding-top: 10rpx;
+  
+  margin-bottom: 4rpx;
+}
+
+.unReadNum{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  margin-left: 130rpx;
+  background-color: #f75959;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 30rpx;
+  color: #ffffff;
+  font-size: 28rpx;
+}
+
+.friend-avator{
+  float: left;
+  height: 130rpx;
+  width: 130rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  border-radius: 10rpx;
+
+}
+.friend-nickname{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66rpx;
+
+  font-size: 28rpx;
+  color: #3b3b3b;
+  font-weight: 700;
+ 
+
+}
+.message-text{
+  margin-left: 168rpx;
+  font-size: 28rpx;
+  width: 520rpx;
+  color: #999999;
+  word-break:break-all;
+}
+/* 通知的样式 */
+.your-comment-view{
+  width: 560rpx;
+  margin-left: 86rpx;
+  margin-top: 20rpx;
+  padding:20rpx;
+  font-size: 28rpx;
+  color:#a7a7a7;
+  background-color: #f1f1f1;
+}
